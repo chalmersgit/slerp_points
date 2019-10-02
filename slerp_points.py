@@ -10,9 +10,6 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 def slerp_points(a,b,nPointsPerDegree=1,showPlot=False):
-	# Computes N spherically interpolated points between two 3D points (a and b)
-	# where N scales based on the angle between a and b using nPointsPerDegree.
-	# a and b are normalized.
 	"""
 	Computes N spherically interpolated points between two 3D points (a and b)
 	where N scales based on the angle between a and b using nPointsPerDegree.
