@@ -26,8 +26,8 @@ def slerp_points(a,b,nPointsPerDegree=1,showPlot=False):
 	Returns
 	-------
 	points : ndarray (N,3)
-		Returns (N,3) shape, where each row is an slerped point between a and b.
-	Examples
+		Returns (N,3) shape, where each row is a slerped point between a and b.
+	Example
 	--------
 	points = slerp_points(np.asarray([0,1,0]), np.asarray([1,0,0]),0.5,True)
 	"""
@@ -38,13 +38,13 @@ def slerp_points(a,b,nPointsPerDegree=1,showPlot=False):
 			return x
 		return x/np.linalg.norm(x)
 
-	# avoid origin
+	# Avoid origin
 	if np.dot(a,a)==0:
 		return np.asarray([b,])
 	if np.dot(b,b)==0:
 		return np.asarray([a,])
 
-	# normalize
+	# Normalize input points
 	a = normalize(a)
 	b = normalize(b)
 
