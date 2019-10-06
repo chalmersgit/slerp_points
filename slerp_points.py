@@ -75,7 +75,7 @@ def slerp_points(a,b,nPointsPerDegree=1,showPlot=False):
 	kXa_tiled = np.tile(np.cross(k,a), (N,1))
 	kDa_tiled = np.tile(np.dot(k,a), (N,1))
 
-	# Compute N angles between a and b
+	# Compute N points between a and b
 	points = a_tiled*angles_cos+kXa_tiled*angles_sin+k_tiled*kDa_tiled*(1.0-angles_cos)
 
 	if showPlot:
